@@ -17,7 +17,7 @@ class Main {
     }
 
     public getValue():number {
-        return this._a.val;
+        return this._a.val + 17;
     }
 
 
@@ -28,3 +28,4 @@ class Main {
   */
 const  xxx = new Main();
 export default xxx;
+

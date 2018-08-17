@@ -24,7 +24,7 @@
             this._a = new A();
         }
         getValue() {
-            return this._a.val;
+            return this._a.val + 17;
         }
     }
     const xxx = new Main();

@@ -24,12 +24,40 @@ const browserSync = require("browser-sync");
  TYPESCRIPT
  ======================================================================================*/
 
-gulp.task("ts_main", function () {
+gulp.task("ts_main",function () {
     clear();
     let tsRes = gulp.src("./src/ts/**/*.ts")
         .pipe(tsProject());
+
     return tsRes.js.pipe(gulp.dest("./tmp_js/"))
         //.pipe(browserSync.reload({stream: true}));
+
+
+});
+
+
+/* =====================================================================================
+ ROLLUP
+ ======================================================================================*/
+
+gulp.task('package', function () {
+
+    return new Promise(async resolve => {
+
+        const rollup = require("./rollup");
+
+        await rollup.build();
+
+        console.log(1)
+
+        browserSync.reload({stream: false});
+
+        console.log(2)
+
+        resolve();
+
+    });
+
 
 
 });
@@ -39,7 +67,8 @@ gulp.task("ts_main", function () {
  WATCH
  ======================================================================================*/
 gulp.task('watch', function () {
-    gulp.watch('./src/**/*.ts', ['ts_main']);
+    gulp.watch('./src/ts/**/*.ts', ['ts_main']);
+    gulp.watch('./tmp_js/**/*.*', ['package']);
 
 });
 
