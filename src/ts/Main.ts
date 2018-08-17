@@ -1,5 +1,10 @@
 import {A} from "./A";
 
+/**
+ * If you want to keep the static ref use export default class MyMainClass.
+ * Otherwise, use const at the end of this class.
+ */
+//export default class Main {
 class Main {
 
 
@@ -17,3 +22,9 @@ class Main {
 
 
 }
+
+/**
+ * If you want to instantiate the main class
+  */
+const  xxx = new Main();
+export default xxx;
