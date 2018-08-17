@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    //"target": "es5",
+    "target": "es6",
+    "sourceMap": true,
+    "outDir": "./tmp_js",
+    "module": "es6",
+    "moduleResolution": "node",
+    "noImplicitAny": true,
+    "removeComments": true
+    //"lib": [ "es2015" ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

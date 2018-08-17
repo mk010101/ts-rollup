@@ -1,0 +1,19 @@
+{
+  "name": "testrollup",
+  "version": "1.0.0",
+  "description": "JS tween library",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Max Kostin",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "*",
+    "gulp": "*",
+    "gulp-rename": "*",
+    "gulp-typescript": "*",
+    "rollup": "^0.64.1",
+    "typescript": "*"
+  }
+}
